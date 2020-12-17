@@ -1,0 +1,132 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+* {
+    -fx-primary: #343942;
+    -fx-secondary: #FFE700;
+    -fx-primarytext: #B2B2B2;
+
+}
+
+.root {
+    -fx-background-color: -fx-primary;
+
+}
+
+.button {
+    -fx-text-fill: -fx-primarytext;
+    -fx-background-color: -fx-primary;
+    -fx-border-color: -fx-secondary;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-font-size: 11pt;
+}
+
+.button:hover {
+    -fx-border-color: -fx-secondary;
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-primary;
+}
+
+#WrongLogin {
+    -fx-text-fill: red;
+}
+.label {
+    -fx-text-fill: -fx-primarytext;
+}
+
+
+.text-field {
+    -fx-text-fill: -fx-primary;
+    -fx-font-size: 11pt;
+    -jfx-focus-color: -fx-secondary;
+    -fx-text-fill: derive(-fx-primary, 20%);
+}
+
+.tab-header-background {
+    -fx-background-color: -fx-primary;
+}
+
+.menu-bar {
+    -fx-base: -fx-primary;
+    -fx-background-color: -fx-primary;
+    -fx-font-size: 16;
+}
+.menu:hover , .menu .menu-item:hover {
+    -fx-background-color: -fx-secondary;
+}
+
+
+.context-menu {
+    -fx-background-color: derive(-fx-primary, 20%);
+}
+
+.check-box {
+    -fx-text-fill: -fx-primarytext;
+}
+
+.table-view {
+    -fx-background-color: derive(-fx-primary, 10%);
+    -fx-font-size: 13px;
+}
+
+.table-view:focused {
+    -fx-background-color: derive(-fx-primary, 20%);
+}
+
+.table-row-cell {
+    -fx-cell-size: 30px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: -fx-primary;
+}
+
+.table-view .column-header-background .label {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: white;
+    -fx-alignment: CENTER;
+}
+
+.table-row-cell:focused, .table-cell:focused {
+    -fx-text-fill: -fx-primary;
+}
+
+.table-row-cell {
+    -fx-background-color: -fx-primary;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-column {
+    -fx-alignment: CENTER;
+}
+
+.table-row-cell:even {
+    -fx-background-color: derive(-fx-primary, 10%);
+}
+
+.table-row-cell:selected {
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-primary;
+    -fx-background-insets: 0;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: -fx-primary;
+}
+
+.table-view .filler {
+    -fx-fill: -fx-primary;
+    -fx-background-color: -fx-primary;
+}
+
+.table-context {
+    -fx-base: -fx-primary;
+}

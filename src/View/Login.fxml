@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+   <children>
+       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="150.0">
+           <children>
+               <Button contentDisplay="TOP" layoutX="200.0" layoutY="306.0" mnemonicParsing="false" onAction="#login" prefHeight="60.0" prefWidth="150.0" text="Login" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0">
+                   <graphic>
+                       <ImageView fitHeight="21.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                               <Image url="@../../lib/images/icons8-login-filled-50.png" />
+                           </image>
+                       </ImageView>
+                   </graphic>
+               </Button>
+               <TextField fx:id="UserName" alignment="TOP_LEFT" layoutX="150.0" layoutY="170.0" promptText="Username" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" />
+               <Label fx:id="WrongLogin" layoutX="230.0" layoutY="140.0" prefHeight="31.0" prefWidth="239.0" text="Wrong Username or Password, Try Again" textAlignment="CENTER" textFill="RED" visible="false" />
+               <Label fx:id="mainTi" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="1.0" layoutX="145.0" layoutY="62.0" lineSpacing="1.0" mouseTransparent="true" prefHeight="108.0" prefWidth="410.0" text="LINNAEUS HOTEL" textAlignment="CENTER" AnchorPane.leftAnchor="145.0" AnchorPane.rightAnchor="145.0">
+                   <font>
+                       <Font name="Agency FB" size="53.0" />
+                   </font>
+               </Label>
+               <PasswordField fx:id="Password" layoutX="150.0" layoutY="229.0" promptText="Password" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" />
+           </children>
+           <opaqueInsets>
+               <Insets />
+           </opaqueInsets>
+       </AnchorPane>
+   </children>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</AnchorPane>

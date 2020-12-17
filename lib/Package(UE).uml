@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="0.0" y="0.0">View.Alerts</node>
+    <node x="0.0" y="388.0">main.Main</node>
+    <node x="299.50000000000006" y="246.0">Controller</node>
+    <node x="356.0" y="74.5">Model</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Controller" target="View.Alerts">
+      <point x="-82.91666666666663" y="-23.5" />
+      <point x="316.0833333333334" y="226.0" />
+      <point x="84.0" y="226.0" />
+      <point x="-84.0" y="98.0" />
+    </edge>
+    <edge source="Controller" target="Controller">
+      <point x="66.33333333333331" y="23.5" />
+      <point x="465.33333333333337" y="333.0" />
+      <point x="259.50000000000006" y="333.0" />
+      <point x="259.50000000000006" y="253.83333333333334" />
+      <point x="-99.5" y="-15.666666666666664" />
+    </edge>
+    <edge source="Controller" target="Model">
+      <point x="49.75" y="-23.5" />
+      <point x="448.75000000000006" y="226.0" />
+      <point x="463.5" y="226.0" />
+      <point x="21.5" y="23.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="292.5" y="280.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

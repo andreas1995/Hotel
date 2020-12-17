@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SearchRoomController">
+    <children>
+        <AnchorPane layoutX="30.0" layoutY="74.0" prefHeight="599.0" prefWidth="207.0" AnchorPane.leftAnchor="30.0">
+            <children>
+                <ChoiceBox fx:id="campusLoc" layoutX="18.0" layoutY="40.0" prefWidth="150.0" />
+                <DatePicker fx:id="checkIn" layoutX="16.0" layoutY="97.0" prefHeight="26.0" prefWidth="150.0" />
+                <DatePicker fx:id="checkOut" layoutX="15.0" layoutY="156.0" prefHeight="26.0" prefWidth="150.0" />
+                <CheckBox fx:id="smokingBox" layoutX="20.0" layoutY="215.0" mnemonicParsing="false" text="Smoking (+100kr)" />
+                <CheckBox fx:id="adjointBox" layoutX="20.0" layoutY="240.0" mnemonicParsing="false" text="Adjoint room " />
+                <Label layoutX="15.0" layoutY="14.0" text="Campus" />
+                <Label layoutX="15.0" layoutY="72.0" text="Check-in date" />
+                <Label layoutX="15.0" layoutY="131.0" text="Check-out date" />
+                <Label layoutX="15.0" layoutY="191.0" text="Room type" />
+                <Label layoutX="13.0" layoutY="300.0" text="Bed type" />
+                <CheckBox fx:id="viewBox" layoutX="20.0" layoutY="265.0" mnemonicParsing="false" text="View (+200kr)" />
+                <Button layoutX="116.0" layoutY="499.0" mnemonicParsing="false" onAction="#searchForRoom" prefHeight="40.0" prefWidth="70.0">
+                    <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../lib/images/icons8-search-filled-50.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button layoutX="17.0" layoutY="499.0" mnemonicParsing="false" onAction="#resetBtn" prefHeight="40.0" prefWidth="70.0">
+                    <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                    </font>
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../lib/images/icons8-synchronize-26.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Label layoutX="14.0" layoutY="390.0" text="Room Size" />
+            <ChoiceBox fx:id="bedTypeChoice" layoutX="16.0" layoutY="325.0" prefHeight="26.0" prefWidth="104.0" />
+            <ChoiceBox fx:id="roomSizeChoice" layoutX="18.0" layoutY="416.0" prefHeight="26.0" prefWidth="104.0" />
+            </children>
+        </AnchorPane>
+        <Button contentDisplay="TOP" layoutX="30.0" layoutY="20.0" mnemonicParsing="false" onAction="#back" prefHeight="30.0" prefWidth="60.0">
+            <graphic>
+                <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../lib/images/icons8-back-26.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <SplitPane layoutX="239.0" layoutY="62.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="541.0" AnchorPane.leftAnchor="239.0" AnchorPane.rightAnchor="219.39999999999998" AnchorPane.topAnchor="62.0">
+            <items>
+                <TableView fx:id="tabView" editable="true" layoutX="58.0" layoutY="64.0" prefHeight="433.0" prefWidth="540.0" AnchorPane.bottomAnchor="161.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="192.0" AnchorPane.topAnchor="60.0">
+                    <columns>
+                        <TableColumn fx:id="tabCol_Id" editable="false" minWidth="0.0" prefWidth="105.0" resizable="false" text="Room Number" />
+                        <TableColumn fx:id="tabCol_Price" prefWidth="93.99992370605469" resizable="false" text="Price" />
+                        <TableColumn fx:id="tabCol_Size" prefWidth="73.3333740234375" text="Size" />
+                        <TableColumn fx:id="tabCol_Beds" prefWidth="109.3333740234375" resizable="false" text="Beds" />
+                        <TableColumn fx:id="tabCol_Location" prefWidth="136.00009155273438" resizable="false" text="Location" />
+                    </columns>
+                </TableView>
+            </items>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </SplitPane>
+        <AnchorPane layoutX="787.0" layoutY="1.0" prefHeight="699.0" prefWidth="207.0" AnchorPane.rightAnchor="5.800000000000011">
+            <children>
+                <Label disable="true" layoutX="22.0" layoutY="14.0" text="Selected Rooms">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <ListView fx:id="roomList" layoutX="4.0" layoutY="60.0" prefHeight="440.0" prefWidth="199.0" />
+                <Button contentDisplay="TOP" layoutX="35.0" layoutY="550.0" mnemonicParsing="false" onAction="#reservebtn" prefHeight="60.0" prefWidth="150.0" text="Reserve">
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../lib/images/icons8-check-book-26.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </AnchorPane>
+        <Label disable="true" layoutX="245.0" layoutY="15.0" text="Available Rooms">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+      <AnchorPane fx:id="managers" layoutX="237.0" layoutY="501.0" prefHeight="186.0" prefWidth="250.0">
+         <children>
+            <Label layoutX="26.0" layoutY="52.0" prefHeight="18.0" prefWidth="199.0" text="Search for a specific room" />
+            <TextField fx:id="managerSearch" layoutX="26.0" layoutY="80.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="afterSearch" layoutX="487.0" layoutY="508.0" prefHeight="186.0" prefWidth="207.0">
+         <children>
+              <Button contentDisplay="TOP" layoutX="28.0" layoutY="44.0" mnemonicParsing="false" onAction="#addRoomToList" prefHeight="60.0" prefWidth="150.0" text="Add">
+                  <graphic>
+                      <ImageView fitHeight="30.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../../lib/images/icons8-add-filled-50.png" />
+                          </image>
+                      </ImageView>
+                  </graphic>
+              </Button>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

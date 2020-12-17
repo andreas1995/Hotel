@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ManagerController">
+   <children>
+      <AnchorPane prefHeight="33.0" prefWidth="968.0" AnchorPane.topAnchor="0.0">
+         <children>
+             <MenuBar prefHeight="40.0" prefWidth="1000.0">
+              <menus>
+                 <Menu mnemonicParsing="false" text="Rooms">
+                  <items>
+                      <MenuItem fx:id="createNewRoomItem" mnemonicParsing="false" onAction="#createNewRoomMenu" text="New Room" />
+                      <MenuItem fx:id="updateRoomItem" mnemonicParsing="false" onAction="#UpdateRoomMenu" text="Manage Rooms" />
+                  </items>
+                </Menu>
+                 <Menu mnemonicParsing="false" text="Accounts">
+                  <items>
+                      <MenuItem fx:id="createNewAccItem" mnemonicParsing="false" onAction="#CreateNewAccountMenu" text="New Account" />
+                      <MenuItem fx:id="changePassOrUserItem" mnemonicParsing="false" onAction="#changeUserOrPassMenu" text="Manage Accounts" />
+                  </items>
+                </Menu>
+              </menus>
+               <effect>
+                  <ColorAdjust brightness="-0.07" />
+               </effect>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+       <AnchorPane fx:id="anchor_CreateRoom" layoutX="6.0" layoutY="30.0" prefHeight="672.0" prefWidth="959.0" visible="false">
+         <children>
+            <Label layoutX="13.0" layoutY="24.0" prefHeight="17.0" prefWidth="217.0" text="Create New Room">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="74.0" prefHeight="17.0" prefWidth="217.0" text="Please, Enter the new room information" />
+             <Label layoutX="10.0" layoutY="107.0" text="Room ID" />
+             <TextField fx:id="addRoomIDTextF" layoutX="129.0" layoutY="100.0" />
+             <Label layoutX="10.0" layoutY="147.0" text="Price" />
+             <TextField fx:id="priceAddTextF" layoutX="129.0" layoutY="140.0" />
+             <Label layoutX="10.0" layoutY="227.0" text="Number of beds" />
+             <Label layoutX="10.0" layoutY="187.0" text="Room size" />
+            <CheckBox fx:id="addViewCB" layoutX="107.0" layoutY="346.0" mnemonicParsing="false" text="View" />
+            <CheckBox fx:id="addAdjointCB" layoutX="13.0" layoutY="345.0" mnemonicParsing="false" text="Adjoint" />
+            <CheckBox fx:id="addSmokingCB" layoutX="196.0" layoutY="345.0" mnemonicParsing="false" text="Smoking" />
+             <AnchorPane fx:id="anchor_adjoint" layoutX="12.0" layoutY="377.0" prefHeight="91.0" prefWidth="622.0">
+               <children>
+                  <TextField fx:id="addAdjointRoomIDTextF" layoutX="126.0" layoutY="53.0" />
+                  <Label layoutX="10.0" layoutY="58.0" text="Adoint room" />
+               </children>
+            </AnchorPane>
+             <Label layoutX="10.0" layoutY="264.0" text="Location" />
+             <ChoiceBox fx:id="addLocChoiceBox" layoutX="129.0" layoutY="260.0" prefHeight="26.0" prefWidth="103.0" />
+             <Button fx:id="Cancel" contentDisplay="TOP" layoutX="813.0" layoutY="342.0" mnemonicParsing="false" onAction="#cancelbtn" prefHeight="60.0" prefWidth="150.0" text="Cancel" AnchorPane.rightAnchor="0.33333333333337123">
+                 <graphic>
+                     <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                         <image>
+                             <Image url="@../../lib/images/icons8-close-window-filled-50.png" />
+                         </image>
+                     </ImageView>
+                 </graphic>
+             </Button>
+            <AnchorPane fx:id="anchor_CreateRoom1" prefHeight="672.0" prefWidth="959.0" visible="false">
+               <children>
+                  <Label layoutX="13.0" layoutY="24.0" prefHeight="17.0" prefWidth="217.0" text="Create New Room">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="74.0" prefHeight="17.0" prefWidth="217.0" text="Please, Enter the new room information" />
+                  <Label layoutX="14.0" layoutY="105.0" text="Room ID" />
+                  <TextField fx:id="addRoomIDTextF1" layoutX="129.0" layoutY="101.0" />
+                  <Label layoutX="12.0" layoutY="144.0" text="Price" />
+                  <TextField fx:id="priceAddTextF1" layoutX="129.0" layoutY="140.0" prefHeight="26.0" prefWidth="150.0" />
+                  <TextField fx:id="addRoomSizeTextF1" layoutX="129.0" layoutY="182.0" />
+                  <Label layoutX="12.0" layoutY="226.0" text="Number of beds" />
+                  <TextField fx:id="addNoOfBedTextF1" layoutX="129.0" layoutY="223.0" />
+                  <Label layoutX="13.0" layoutY="186.0" text="Room size" />
+                  <CheckBox fx:id="addViewCB1" layoutX="107.0" layoutY="346.0" mnemonicParsing="false" text="View" />
+                  <CheckBox fx:id="addAdjointCB1" layoutX="13.0" layoutY="345.0" mnemonicParsing="false" text="Adjoint" />
+                  <CheckBox fx:id="addSmokingCB1" layoutX="196.0" layoutY="345.0" mnemonicParsing="false" text="Smoking" />
+                  <AnchorPane fx:id="anchor_adjoint1" layoutX="7.0" layoutY="383.0" prefHeight="126.0" prefWidth="622.0">
+                     <children>
+                        <TextField fx:id="addAdjointRoomIDTextF1" layoutX="126.0" layoutY="53.0" />
+                        <Label layoutX="10.0" layoutY="58.0" text="Adoint room" />
+                        <Label layoutX="14.0" layoutY="16.0" text="Please, enter the room numbers " />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="13.0" layoutY="274.0" text="Location" />
+                  <ChoiceBox fx:id="addLocChoiceBox1" layoutX="129.0" layoutY="270.0" prefHeight="26.0" prefWidth="103.0" />
+                  <Button layoutX="18.0" layoutY="611.0" mnemonicParsing="false" onAction="#cancelbtn" prefHeight="34.0" prefWidth="87.0" text="Cancel" />
+                   <Button layoutX="834.0" layoutY="611.0" mnemonicParsing="false" onAction="#CreateRoombtn" prefHeight="34.0" prefWidth="87.0" text="Create" />
+               </children>
+            </AnchorPane>
+             <Button contentDisplay="TOP" layoutX="813.0" layoutY="422.0" mnemonicParsing="false" onAction="#CreateRoombtn" prefHeight="60.0" prefWidth="150.0" text="Create" AnchorPane.rightAnchor="0.5999999999999943">
+                 <graphic>
+                     <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                         <image>
+                             <Image url="@../../lib/images/icons8-add-filled-50.png" />
+                         </image>
+                     </ImageView>
+                 </graphic>
+             </Button>
+            <ChoiceBox fx:id="addChoiceSize" layoutX="129.0" layoutY="184.0" prefHeight="31.0" prefWidth="103.0" />
+            <ChoiceBox fx:id="numberOfBeds" layoutX="126.0" layoutY="220.0" prefHeight="31.0" prefWidth="103.0" />
+         </children>
+      </AnchorPane>
+       <AnchorPane fx:id="anchor_UpdateRoom" layoutX="2.0" layoutY="31.0" prefHeight="655.0" prefWidth="985.0" visible="false" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="29.66666666666663" AnchorPane.topAnchor="30.0">
+         <children>
+            <Label layoutX="13.0" layoutY="24.0" prefHeight="17.0" prefWidth="217.0" text="Update Room Information">
+               <font>
+                   <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+             <TableView fx:id="tabView" editable="true" layoutX="58.0" layoutY="64.0" prefHeight="434.0" prefWidth="733.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="168.9333333333334" AnchorPane.topAnchor="60.0">
+               <columns>
+                   <TableColumn fx:id="tabCol_Id" editable="false" minWidth="0.0" prefWidth="105.0" resizable="false" text="Room Number" />
+                   <TableColumn fx:id="tabCol_Price" onEditCommit="#EditRoomPrice" prefWidth="93.99992370605469" resizable="false" text="Price" />
+                   <TableColumn fx:id="tabCol_Size" onEditCommit="#EditRoomSize" prefWidth="73.3333740234375" text="Size" />
+                   <TableColumn fx:id="tabCol_Beds" onEditCommit="#EditRoomBeds" prefWidth="109.3333740234375" resizable="false" text="Beds" />
+                   <TableColumn fx:id="tabCol_Location" onEditCommit="#EditRoomLocation" prefWidth="81.333251953125" resizable="false" text="Location" />
+                   <TableColumn fx:id="tabCol_View" onEditCommit="#EditRoomView" prefWidth="46.66668701171875" resizable="false" text="View" />
+                   <TableColumn fx:id="tabCol_Smoke" onEditCommit="#EditRoomSmoke" prefWidth="72.66668701171875" resizable="false" text="Smoking" />
+                   <TableColumn fx:id="tabCol_Adjoint" onEditCommit="#EditRoomAdjoint" prefWidth="60.0" resizable="false" text="Adjoint" />
+                   <TableColumn fx:id="tabCol_AdjointID" onEditCommit="#EditRoomAdjointID" prefWidth="80.66668701171875" resizable="false" text="Adjoint ID" />
+               </columns>
+            </TableView>
+             <Button fx:id="DelRoomBtn" contentDisplay="TOP" layoutX="813.0" layoutY="422.0" mnemonicParsing="false" onAction="#DeleteRoom" prefHeight="60.0" prefWidth="150.0" text="Delete" AnchorPane.rightAnchor="22.200000000000017">
+                 <graphic>
+                     <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                         <image>
+                             <Image url="@../../lib/images/icons8-trash-filled-50.png" />
+                         </image>
+                     </ImageView>
+                 </graphic>
+             </Button>
+         </children>
+      </AnchorPane>
+       <AnchorPane fx:id="anchor_CreateAccount" layoutX="16.0" layoutY="40.0" prefHeight="672.0" prefWidth="959.0" visible="false">
+         <children>
+            <Label layoutX="13.0" layoutY="24.0" prefHeight="17.0" prefWidth="217.0" text="Create Account">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="74.0" prefHeight="17.0" prefWidth="217.0" text="Please, Enter Employee Information" />
+             <Label layoutX="20.0" layoutY="108.0" text="Name" />
+             <TextField fx:id="addAccNameTextF" layoutX="129.0" layoutY="100.0" AnchorPane.topAnchor="101.0" />
+             <Label layoutX="20.0" layoutY="147.0" text="ID Number" />
+             <TextField fx:id="addAccIDTextF" layoutX="129.0" layoutY="140.0" />
+             <Label layoutX="20.0" layoutY="317.0" text="User Name" />
+             <TextField fx:id="addAccUserTextF" layoutX="129.0" layoutY="310.0" />
+             <Label layoutX="20.0" layoutY="357.0" text="Password" />
+             <TextField fx:id="addAccPassWordTextF" layoutX="129.0" layoutY="350.0" />
+             <TextField fx:id="addAccAddTextF" layoutX="129.0" layoutY="180.0" />
+             <Label layoutX="20.0" layoutY="187.0" text="Address" />
+             <TextField fx:id="addPhoneNoTextF" layoutX="129.0" layoutY="220.0" />
+             <Label layoutX="20.0" layoutY="227.0" text="Phone No." />
+             <Label layoutX="20.0" layoutY="276.0" prefHeight="17.0" prefWidth="217.0" text="Account Information" />
+             <Button contentDisplay="TOP" layoutX="813.0" layoutY="422.0" mnemonicParsing="false" onAction="#CreateEmployeeBtn" prefHeight="60.0" prefWidth="150.0" text="Create" AnchorPane.bottomAnchor="190.66666666666669" AnchorPane.leftAnchor="809.0" AnchorPane.rightAnchor="0.33333333333337123" AnchorPane.topAnchor="414.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+                 <graphic>
+                     <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                         <image>
+                             <Image url="@../../lib/images/icons8-add-filled-50.png" />
+                         </image>
+                     </ImageView>
+                 </graphic>
+            </Button>
+             <CheckBox fx:id="isManager" layoutX="242.0" layoutY="405.0" mnemonicParsing="false" text="Manager" />
+             <Button fx:id="Cancel1" contentDisplay="TOP" layoutX="809.0" layoutY="332.0" mnemonicParsing="false" onAction="#canceCreateAccount" prefHeight="60.0" prefWidth="150.0" text="Cancel">
+                 <graphic>
+                     <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                         <image>
+                             <Image url="@../../lib/images/icons8-close-window-filled-50.png" />
+                         </image>
+                     </ImageView>
+                 </graphic>
+             </Button>
+         </children>
+      </AnchorPane>
+       <AnchorPane fx:id="anchor_EditAccount" layoutX="11.0" layoutY="30.0" prefHeight="672.0" prefWidth="959.0" visible="false" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="29.66666666666663" AnchorPane.topAnchor="30.0">
+         <children>
+             <Label layoutX="13.0" layoutY="24.0" prefHeight="17.0" prefWidth="217.0" text="Edit Employee Accounts">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+             <Label layoutX="14.0" layoutY="74.0" prefHeight="17.0" prefWidth="217.0" text="Please, Enter Employee Information" visible="false" />
+             <Label layoutX="14.0" layoutY="105.0" text="Name" visible="false" />
+             <TextField layoutX="129.0" layoutY="101.0" visible="false" />
+             <Label layoutX="14.0" layoutY="144.0" text="ID Number" visible="false" />
+             <TextField layoutX="129.0" layoutY="140.0" prefHeight="25.0" prefWidth="149.0" visible="false" />
+             <Label layoutX="13.0" layoutY="264.0" text="Email Address" visible="false" />
+             <TextField layoutX="129.0" layoutY="259.0" visible="false" />
+             <Label layoutX="13.0" layoutY="354.0" text="Change User Name" visible="false" />
+             <TextField layoutX="129.0" layoutY="350.0" visible="false" />
+             <Label layoutX="13.0" layoutY="397.0" text="Password" visible="false" />
+             <TextField layoutX="129.0" layoutY="393.0" visible="false" />
+             <TextField layoutX="129.0" layoutY="178.0" visible="false" />
+             <Label layoutX="14.0" layoutY="182.0" text="Address" visible="false" />
+             <TextField layoutX="129.0" layoutY="219.0" visible="false" />
+             <Label layoutX="14.0" layoutY="223.0" text="Phone No." visible="false" />
+             <Label layoutX="13.0" layoutY="319.0" prefHeight="17.0" prefWidth="217.0" text="Please, Enter Account Information" visible="false" />
+             <TextField layoutX="128.0" layoutY="435.0" visible="false" />
+             <TableView fx:id="tabViewEmp" editable="true" prefHeight="434.0" prefWidth="730.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="168.9333333333334" AnchorPane.topAnchor="60.0">
+               <columns>
+                   <TableColumn fx:id="tabCol_EmpID" editable="false" prefWidth="93.99992370605469" resizable="false" text="ID Nr." />
+                   <TableColumn fx:id="tabCol_EmpName" minWidth="0.0" onEditCommit="#EditEmpName" prefWidth="105.0" resizable="false" text="Name" />
+                   <TableColumn fx:id="tabCol_EmpUsername" onEditCommit="#EditEmpUsername" prefWidth="93.99992370605469" resizable="false" text="Username" />
+                   <TableColumn fx:id="tabCol_EmpPassword" onEditCommit="#EditEmpPassword" prefWidth="73.3333740234375" text="Password" />
+                   <TableColumn fx:id="tabCol_EmpAd" onEditCommit="#EditEmpAd" prefWidth="109.3333740234375" resizable="false" text="Adress" />
+                   <TableColumn fx:id="tabCol_EmpPhone" onEditCommit="#EditEmpPhone" prefWidth="136.00009155273438" resizable="false" text="Phone Nr." />
+               </columns>
+            </TableView>
+             <Label layoutX="12.0" layoutY="439.0" text="Change Password" visible="false" />
+             <Button layoutX="20.0" layoutY="598.0" mnemonicParsing="false" onAction="#cancelEditAcc" prefHeight="41.0" prefWidth="86.0" text="Cancel" visible="false">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+             <Button layoutX="831.0" layoutY="598.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="86.0" text="Save" visible="false" AnchorPane.rightAnchor="22.200000000000017">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+             <TextField layoutX="127.0" layoutY="479.0" visible="false" />
+             <Label layoutX="13.0" layoutY="483.0" text="Re-Enter Password" visible="false" />
+             <Button contentDisplay="TOP" layoutX="813.0" layoutY="422.0" mnemonicParsing="false" onAction="#DeleteEmp" prefHeight="60.0" prefWidth="150.0" text="Delete" AnchorPane.rightAnchor="-4.0666666666666345">
+                 <graphic>
+                     <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                         <image>
+                             <Image url="@../../lib/images/icons8-trash-filled-50.png" />
+                         </image>
+                     </ImageView>
+                 </graphic>
+             </Button>
+         </children>
+      </AnchorPane>
+       <AnchorPane fx:id="buttonsBox" layoutX="6.0" layoutY="159.0" prefHeight="200.0" prefWidth="150.0" AnchorPane.rightAnchor="10.0">
+         <children>
+             <VBox layoutY="14.0" prefHeight="200.0" prefWidth="150.0" AnchorPane.rightAnchor="0.0">
+                 <children>
+                     <Button fx:id="goToMenu" contentDisplay="TOP" mnemonicParsing="false" onAction="#goToMenuMenu" prefHeight="60.0" prefWidth="150.0" text="Menu">
+                         <VBox.margin>
+                             <Insets bottom="10.0" />
+                         </VBox.margin>
+                         <graphic>
+                             <ImageView fitHeight="30.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                     <Image url="@../../lib/images/icons8-xbox-menu-filled-50.png" />
+                                 </image>
+                             </ImageView>
+                         </graphic>
+                     </Button>
+                     <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#logout" prefHeight="60.0" prefWidth="150.0" text="Logout">
+                         <graphic>
+                             <ImageView fitHeight="30.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                     <Image url="@../../lib/images/icons8-shutdown-filled-50.png" />
+                                 </image>
+                             </ImageView>
+                         </graphic>
+                     </Button>
+                 </children>
+             </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
